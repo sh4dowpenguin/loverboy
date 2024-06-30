@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" lang="pt-br, en-us">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hey there, beautiful...</title>
+        <style>
+             * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background-image: linear-gradient(to bottom, #f1b, #fccadb, #fff7f7); /* degradê do corpo do site */
+}
+
+h1 {
+   text-align: center;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   letter-spacing: 2px;
+}
+
+.shy-girl {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 60vh;
+}
+
+.go-out {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 2px;
+}
+
+.buttons-container{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 20vh;
+    gap: 350px;
+}
+
+/* Adiciona estilo aos botões */
+button {
+    font-size: 19px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: 700;
+        text-decoration: none;
+        display: flex;
+        color: #f1b;
+        padding: 15px 25px;
+        border: #f1b 8px solid;
+        border-radius: 0.25em;
+}
+
+/* Customiza o botão "Yes" */
+#yes {
+    text-decoration: none;
+    color: #f1b;
+    letter-spacing: 2px;
+}
+
+/* Customiza o botão "No" */
+#no {
+    font-size: 20px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: 700;
+        text-decoration: none;
+        display: inline-flexbox;
+        color: #f1b;
+        padding: 15px 25px;
+        border: #f1b 8px solid;
+        border-radius: 0.25em;
+}
+        </style>
+    </head>
+    <body class="body">
+        <h1>I think you're an interesting, funny and cute person</h1>
+        <div class="shy-girl">
+                <img src="shy-anime.gif">
+            </div>
+            <div class="go-out">
+                <p>Do you wanna go out with me?</p>
+            </div>
+            <div class="buttons-container">
+                <button>
+                    <a href="index3.html" id="yes">Yes</a>
+                </button>
+                <button id="no">No</button>
+        </div>
+    </body>
+    <script>
+      const button = document.getElementById('no');
+      const height = window.innerHeight - 50;
+      const width = window.innerWidth - 50;
+
+     button.addEventListener('mouseover', () => {
+     button.style.position = 'absolute';
+     button.style.top = `${Math.random() * height}px`;
+     button.style.left = `${Math.random() * width}px`;
+});
+    </script>
+</html>
